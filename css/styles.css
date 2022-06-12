@@ -72,6 +72,10 @@ header{
     align-items: flex-end;
 }
 
+.linkindex:hover{
+    transform: translate(5px);
+}
+
 .listamenu{
     font-size: 30px;
     text-decoration: none;
@@ -127,8 +131,8 @@ header nav ul li{
 
 #imagenesprod:hover{
     transform: scale(1.2);
+    cursor: pointer;
 }
-
 
 footer{
     background-color: #7c7c7c9c;
