@@ -1,0 +1,366 @@
+.contenedor{
+    height: 100vh; 
+    display: grid;
+    /* columnas*/
+    grid-template-columns: repeat(5, 1fr);
+    /* filas*/
+    grid-template-rows: repeat(3, 2fr);
+    /*espacio*/
+    gap: 10px 20px;
+}
+
+/* propiedades de los hijos*/
+
+
+/* código del body */
+body{
+    background-image: url(../img/cool-background.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* PROPIEDADES DE LOS HIJOS*/
+header{
+    grid-area: header;
+    display: grid;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-family: 'Belleza', sans-serif;
+    color: black;
+}
+
+.headerNovedades{
+    position: relative; top: 30px;
+}
+
+#logo{
+    display: flex;
+    grid-area: logo;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 40px;
+    background-repeat: no-repeat;
+    justify-content: flex-start;
+    position: relative; top: -40px; left: -60px;
+    border-radius: 30px;
+}
+
+.headertext{
+    display: grid;
+    grid-area: headertext;
+}
+
+.linkindex{
+    display: flex;
+    grid-area: linkindex;
+    text-align: end;
+    position: relative; top: -130px; left: 120px;
+    margin: 10px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: black;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.listamenu{
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+    list-style: none;
+    display: inline;
+    column-count: 4;
+    text-align: center;
+    column-gap: 1px;
+    font-family: 'Belleza', sans-serif;
+}
+
+header nav ul{
+    display: grid;
+    grid-area: elementosmenu;  
+    margin: 13rem;
+    justify-content: space-evenly;
+}
+
+.elementosmenu{
+    text-decoration: none;
+    color: black;
+    grid-area: elementosmenu;
+    list-style: none;
+}
+
+header nav ul li{
+    margin: 50px;
+    list-style: none;
+    font-size: 50px;
+}
+
+.navGrid{
+    grid-area: Menuitems;
+    display: grid;
+}
+
+.main{
+    display: grid;
+    grid-area: main;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;     
+    align-items: flex-start;  
+    margin-left: 1rem;
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+
+#imagenesprod{
+    width: 8rem;
+    height: 8rem;
+}
+
+#imagenesprod:hover{
+    transform: scale(1.2);
+}
+
+
+footer{
+    background-color: #7c7c7c9c;
+    display: grid;
+    grid-area: footer;
+    justify-content: space-around;
+    grid-template-rows: 2rem;
+    font-size: 0.6rem;
+}
+
+.contactform{
+    border: none;
+    margin: auto;
+    width: 100px;
+    grid-area: contactform;
+}
+
+/* propiedades logo en footer*/
+#logoig{
+    display: inline;
+    position: relative; top: -25px; left: 320px;
+    width: 2rem;
+    height: 2rem;
+}
+
+#linkig{
+    color: black;
+    text-align: center;
+    font-size: 0.8rem;
+    font-family: 'Radio Canada', sans-serif;
+}
+
+.aside{
+    display: none;
+}
+
+ /* propiedades del padre en index*/
+ .contenedor{
+     display: grid;
+     height: 100vh;
+     grid-template-columns: 1fr 1fr 1fr;
+     grid-template-rows: 1.5fr 1fr 0.3fr 1.5fr 1fr 0.3fr;
+     gap: 10px;
+     grid-template-areas:   "header header header"
+                            "elementosmenu elementosmenu elementosmenu"
+                            "elementosmenu elementosmenu elementosmenu"
+                            "elementosmenu elementosmenu elementosmenu"
+                            "elementosmenu elementosmenu elementosmenu"
+                            "footer footer footer";
+ }
+
+ /* propiedades del body en novedades*/
+ .contenedornovedades{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.3fr 0.5fr 1fr 1fr 1fr 0.3fr;
+    gap: 10px;
+    grid-template-areas:    "logo header header header indexbutton"  
+                            "Menuitems Menuitems Menuitems Menuitems Menuitems"                     
+                            "main main main main ."
+                            "main main main main ."
+                            "main main main main ."
+                            /*". sectionuno sectiondos . ."
+                            ". sectiontres sectioncuatro . ."*/
+                            "footer footer footer footer footer";
+}
+
+/*propiedades del body en productos*/
+.contenedorproductos{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.3fr 0.5fr 1fr 1fr 1fr 0.3fr;
+    gap: 10px;
+    grid-template-areas:    "logo header header header indexbutton"  
+                            "Menuitems Menuitems Menuitems Menuitems Menuitems"                     
+                            "main main main main ."
+                            "main main main main ."
+                            "main main main main ."
+                            /*". sectionuno sectiondos . ."
+                            ". sectiontres sectioncuatro . ."*/
+                            "footer footer footer footer footer";
+}
+
+/* propiedades del body en nosotros */
+
+.contenedornosotros{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.3fr 0.5fr 1fr 1fr 1fr 0.3fr;
+    gap: 10px;
+    grid-template-areas:    "logo header header header indexbutton"  
+                            "Menuitems Menuitems Menuitems Menuitems Menuitems"                     
+                            "aside main main main main"
+                            "aside main main main main"
+                            "aside main main main main"
+                            /*". sectionuno sectiondos . ."
+                            ". sectiontres sectioncuatro . ."*/
+                            "footer footer footer footer footer";
+}
+
+/* propiedades del body en contacto */
+
+.contenedorcontacto{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.3fr 0.5fr 1fr 1fr 1fr 0.3fr;
+    gap: 10px;
+    grid-template-areas:    "logo header header header indexbutton"  
+                            "Menuitems Menuitems Menuitems Menuitems Menuitems"                     
+                            "aside contactform contactform contactform contactform"
+                            "aside contactform contactform contactform contactform"
+                            "aside contactform contactform contactform contactform"
+                            /*". sectionuno sectiondos . ."
+                            ". sectiontres sectioncuatro . ."*/
+                            "footer footer footer footer footer";
+}
+
+/* Media Queries */
+@media screen and (min-width:600px) {
+    .contenedornovedades{
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 2fr 1fr 0.3fr;
+        gap: 10px;
+        grid-template-areas:    "logo header header header indexbutton"  
+                                "Menuitems Menuitems Menuitems Menuitems Menuitems"                     
+                                "aside main main main main"
+                                "aside main main main main"
+                                "footer footer footer footer footer";
+    }
+
+    .contenedorproductos{
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0.3fr 1fr 2fr 1fr 0.3fr;
+        gap: 10px;
+        grid-template-areas:    "logo header header header indexbutton"  
+                                "Menuitems Menuitems Menuitems Menuitems Menuitems"                     
+                                "aside main main main main"
+                                "aside main main main main"
+                                "footer footer footer footer footer";
+    }
+
+    .contenedornosotros{
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0.3fr 1fr 2fr 1fr 0.3fr;
+        gap: 10px;
+        grid-template-areas:    "logo header header header indexbutton"  
+                                "Menuitems Menuitems Menuitems Menuitems Menuitems"                     
+                                "aside main main main main"
+                                "aside main main main main"
+                                "footer footer footer footer footer";
+    }
+
+    .contenedorcontacto{
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0.3fr 1fr 2fr 1fr 0.3fr;
+        gap: 10px;
+        grid-template-areas:    "logo header header header indexbutton"  
+                                "Menuitems Menuitems Menuitems Menuitems Menuitems"                     
+                                "aside contactform contactform contactform contactform"
+                                "aside contactform contactform contactform contactform"
+                                "footer footer footer footer footer";
+    }
+
+    #logo{
+        display: flex;
+        grid-area: logo;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 40px;
+        background-repeat: no-repeat;
+        justify-content: flex-start;
+        position: relative; top: -50px; left: -110px;
+        border-radius: 30px;
+    }
+
+    .linkindex{
+        display: flex;
+        grid-area: linkindex;
+        text-align: end;
+        position: relative; top: -130px;
+        margin: 10px;
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: black;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .listamenu{
+        font-size: 30px;
+        text-decoration: none;
+        color: black;
+        list-style: none;
+        display: inline;
+        column-count: 4;
+        text-align: center;
+        column-gap: 1px;
+        font-family: 'Belleza', sans-serif;
+    }
+
+    #imagenesprod{
+        width: 10rem;
+        height: 10rem;
+    }
+
+    #logoig{
+        position: relative; top: -25px; left: 330px;
+        width: 2rem;
+        height: 2rem;
+    }
+    .aside{
+        display: block;
+        grid-area: aside;  
+        width: 8rem;
+        height: 30rem;
+        margin-left: 10px;
+    }
+    #publicidad{
+        width: 8rem;
+        height: 30rem;
+    }
+}
+
