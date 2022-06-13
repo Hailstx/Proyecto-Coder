@@ -103,6 +103,9 @@ header nav ul{
     grid-area: elementosmenu;
     list-style: none;
     font-size: 30px;
+    background: -webkit-linear-gradient(rgb(109, 109, 109), rgb(0, 0, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 header nav ul li{
