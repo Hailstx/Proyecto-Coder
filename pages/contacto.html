@@ -8,47 +8,48 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Belleza&family=Radio+Canada:wght@300&display=swap" rel="stylesheet">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!-- css link -->
     <link rel="stylesheet" href="../css/styles.css">
     <title>Contacto - Íntima Sofía</title>
 </head>
 <body>
-    <!-- logo -->
-    <div id="logo"></div>
     <!-- header -->
-    <div class="contenedorcontacto">
-        <header class="Header">
-            <h1 class="headerNovedades">
+    <div class="container">
+        <header class="row header text-center">
+            <h1 class="col-10 headerContact"> 
                 Íntima Sofía
-            </h1>  
-            <div><img src="../img/logo.png" alt="" id="logo"></div>
-            <div>
-                <a href="../index.html" class="linkindex">index</a>
-            </div> 
+                <img src="../img/logo.png" alt="logo Intima Sofia" class="img-thumbnail w-15 h-50">
+            </h1>
+            <h3 class="col-2 text-center p-0 linkindexContact">
+                <a href="../index.html" class="link-dark">Índex</a>
+            </h3>
         </header>
-        <nav class="navGrid">
+        <nav class="col-12 navGrid">
             <ul class="listamenu">
-                <li> 
+                <li class="col-3"> 
                     <a href="../pages/novedades.html" class="elementosmenu">Novedades</a>
                 </li>
-                <li>
+                <li class="col-3">
                     <a href="../pages/productos.html" class="elementosmenu">Productos</a>
                 </li>
-                <li>
+                <li class="col-3">
                     <a href="../pages/nosotros.html" class="elementosmenu">Nosotros</a>
                 </li>
-                <li>
+                <li class="col-3">
                     <a href="../pages/contacto.html" class="elementosmenu">Contacto</a>
                 </li>
             </ul>
         </nav>
-    </header>
-    <aside class="aside">
+        </header>
+        <div class="container row">
+        <aside class="aside col">
         <img src="../img/publicidad.png" alt="Publicidad" id="publicidad">   
-    </aside>
+        </aside>
     <!-- formulario contacto-->
-    <div class="contactform">
-    <form action="">
+        <div class="contactform col">
+        <form action="">
         <fieldset class="contactform">
             <legend >Contactanos</legend>
             <div>
@@ -69,7 +70,7 @@
                 <label for="Provincia" class="titulosform">
                         Provincia o Localidad
                 </label>
-                <select name="" id="pedos">
+                <select name="">
                     <option value="Buenos Aires">Buenos Aires</option>
                     <option value="Capital Federal">Capital Federal</option>
                     <option value="Catamarca">Catamarca</option>
@@ -109,20 +110,24 @@
                 <input type="reset" value="Reset">
             </div>
         </fieldset>
-    </form>
-    </div>
-    <footer class="footer">
-        <h3 style="font-family: 'Radio Canada', sans-serif;">
+        </form>
+        </div>
+    <footer class="container row footer">
+        <h3 style="font-family: 'Radio Canada', sans-serif;" class="fs-4 row">
             © Íntima Sofía - Todos los derechos reservados - Developed by Facundo T. Miguel @facutmiguel
         </h3>
-            <a href="https://www.instagram.com/intima.sofia/" id="linkig" target="_blank">
-                <h4>
+            <div class="row">
+            <a href="https://www.instagram.com/intima.sofia/" id="linkig" target="_blank" class="col-7">
+                <h4 class="fs-5 d-flex flex-row-reverse">
                     Seguinos en Instagram
                 </h4>
             </a>
-            <a href="https://www.instagram.com/intima.sofia/" target="_blank">
-                <img src="../img/icono ig.png" alt="" id="logoig">
+            <a href="https://www.instagram.com/intima.sofia/" target="_blank" class="col-5 d-flex">
+                <img src="../img/icono ig.png" alt="" style="max-width:25%; max-height: 25%;">
             </a>
+            </div>
     </footer>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>
