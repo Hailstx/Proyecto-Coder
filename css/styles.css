@@ -38,6 +38,15 @@ header{
     color: black;
 }
 
+.headerContact{
+    height: 6rem;
+}
+
+.linkindexContact{
+    height: 3rem;
+    width: auto;
+}
+
 .headerNovedades{
     position: relative; top: 30px;
 }
@@ -64,12 +73,25 @@ header{
     grid-area: headertext;
 }
 
-#headerIndex{
-    margin-top: 40px;
+.linkindex{
+    display: flex;
+    grid-area: linkindex;
+    text-align: end;
+    position: relative; top: -130px; left: 120px;
+    margin: 10px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: black;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.linkindex:hover{
+    transform: transslate(5px);
 }
 
 .listamenu{
-    font-size: 30px;
+    font-size: 1.5rem;
     text-decoration: none;
     color: black;
     list-style: none;
@@ -156,8 +178,8 @@ footer{
 
 .contactform{
     border: none;
-    margin: auto;
-    width: 100px;
+    margin: 0;
+    width: 25rem;
     grid-area: contactform;
 }
 
