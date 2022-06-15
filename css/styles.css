@@ -51,6 +51,11 @@ header{
     position: relative; top: 30px;
 }
 
+#ulIndex{
+    margin: 0px;
+    margin-top: 100px;
+}
+
 #logo{
     display: flex;
     grid-area: logo;
@@ -59,7 +64,7 @@ header{
     border-radius: 40px;
     background-repeat: no-repeat;
     justify-content: flex-start;
-    position: relative; top: -40px; left: -60px;
+    position: relative; top: -40px; left: -90px;
     border-radius: 30px;
 }
 
@@ -67,6 +72,7 @@ header{
     display: grid;
     grid-area: headertext;
 }
+
 
 .linkindex{
     display: flex;
@@ -83,6 +89,10 @@ header{
 
 .linkindex:hover{
     transform: transslate(5px);
+
+#headerIndex{
+    margin-top: 40px;
+
 }
 
 .listamenu{
@@ -91,7 +101,7 @@ header{
     color: black;
     list-style: none;
     display: inline;
-    column-count: 4;
+    column-count: 1;
     text-align: center;
     column-gap: 1px;
     font-family: 'Belleza', sans-serif;
@@ -109,6 +119,17 @@ header nav ul{
     color: black;
     grid-area: elementosmenu;
     list-style: none;
+    background: -webkit-linear-gradient(rgb(109, 109, 109), rgb(0, 0, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.elementosmenuIndex{
+    text-decoration: none;
+    color: black;
+    grid-area: elementosmenu;
+    list-style: none;
+    font-size: 30px;
     background: -webkit-linear-gradient(rgb(109, 109, 109), rgb(0, 0, 0));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -155,6 +176,7 @@ footer{
     display: grid;
     grid-area: footer;
     justify-content: space-around;
+    text-align: center;
     grid-template-rows: 2rem;
     font-size: 0.6rem;
 }
@@ -169,7 +191,7 @@ footer{
 /* propiedades logo en footer*/
 #logoig{
     display: inline;
-    position: relative; top: -25px; left: 320px;
+    position: relative; top: -25px; left: 130px;
     width: 2rem;
     height: 2rem;
 }
@@ -189,6 +211,7 @@ footer{
  .contenedor{
      display: grid;
      height: 100vh;
+     width: 100vw;
      grid-template-columns: 1fr 1fr 1fr;
      grid-template-rows: 1.5fr 1fr 0.3fr 1.5fr 1fr 0.3fr;
      gap: 10px;
@@ -204,6 +227,7 @@ footer{
  .contenedornovedades{
     display: grid;
     height: 100vh;
+    width: 100vw;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 0.3fr 0.5fr 1fr 1fr 1fr 0.3fr;
     gap: 10px;
@@ -221,6 +245,7 @@ footer{
 .contenedorproductos{
     display: grid;
     height: 100vh;
+    width: 100vw;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 0.3fr 0.5fr 1fr 1fr 1fr 0.3fr;
     gap: 10px;
@@ -239,6 +264,7 @@ footer{
 .contenedornosotros{
     display: grid;
     height: 100vh;
+    width: 100vw;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 0.3fr 0.5fr 1fr 1fr 1fr 0.3fr;
     gap: 10px;
@@ -257,6 +283,7 @@ footer{
 .contenedorcontacto{
     display: grid;
     height: 100vh;
+    width: 100vw;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 0.3fr 0.5fr 1fr 1fr 1fr 0.3fr;
     gap: 10px;
@@ -275,6 +302,7 @@ footer{
     .contenedornovedades{
         display: grid;
         height: 100vh;
+        width: 100vw;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 2fr 1fr 0.3fr;
         gap: 10px;
@@ -288,6 +316,7 @@ footer{
     .contenedorproductos{
         display: grid;
         height: 100vh;
+        width: 100vw;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: 0.3fr 1fr 2fr 1fr 0.3fr;
         gap: 10px;
@@ -301,6 +330,7 @@ footer{
     .contenedornosotros{
         display: grid;
         height: 100vh;
+        width: 100vw;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: 0.3fr 1fr 2fr 1fr 0.3fr;
         gap: 10px;
@@ -314,6 +344,7 @@ footer{
     .contenedorcontacto{
         display: grid;
         height: 100vh;
+        width: 100vw;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: 0.3fr 1fr 2fr 1fr 0.3fr;
         gap: 10px;
@@ -336,19 +367,6 @@ footer{
         border-radius: 30px;
     }
 
-    .linkindex{
-        display: flex;
-        grid-area: linkindex;
-        text-align: end;
-        position: relative; top: -130px;
-        margin: 10px;
-        font-size: 1.5rem;
-        text-decoration: none;
-        color: black;
-        flex-direction: column;
-        align-items: flex-end;
-    }
-
     .listamenu{
         font-size: 30px;
         text-decoration: none;
@@ -367,7 +385,7 @@ footer{
     }
 
     #logoig{
-        position: relative; top: -25px; left: 330px;
+        position: relative; top: -25px; left: 130px;
         width: 2rem;
         height: 2rem;
     }
@@ -382,5 +400,117 @@ footer{
         width: 8rem;
         height: 30rem;
     }
+}
+
+@media screen and (max-width:320px) {
+    .contenedornovedades{
+        display: grid;
+        height: 100vh;
+        width: fit-content;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 4fr 0.3fr;
+        gap: 10px;
+        grid-template-areas:    ". header indexbutton"  
+                                "Menuitems Menuitems Menuitems"                 
+                                "main main main"
+                                "main main main"
+                                "footer footer footer";
+    }
+
+    .contenedorproductos{
+        display: grid;
+        height: 100vh;
+        width: 100vw;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 2fr 4fr 0.3fr;
+        gap: 10px;
+        grid-template-areas:    ". header indexbutton"  
+                                ". Menuitems ."                       
+                                ". main ."
+                                ". main ."
+                                "footer footer footer";
+    }
+
+    .contenedornosotros{
+        display: grid;
+        height: 100vh;
+        width: fit-content;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 0.3fr;
+        gap: 10px;
+        grid-template-areas:    ". header indexbutton"  
+                                ". Menuitems ."                    
+                                ". main ."
+                                ". main ."
+                                "footer footer footer";
+    }
+
+    .contenedorcontacto{
+        display: grid;
+        height: 100vh;
+        width: fit-content;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 2fr 1fr 0.3fr;
+        gap: 10px;
+        grid-template-areas:    ". header indexbutton"  
+                                ". Menuitems ."                     
+                                ". contactform ."
+                                ". contactform ."
+                                "footer footer footer";
+    }
+
+    #logo{
+        display: none;
+    }
+
+    .headerNovedades{
+        font-size: 2rem;
+    }
+
+    .listamenu{
+        font-size: 30px;
+        height: fit-content;
+        column-count: 1;
+        text-align: center;
+    }
+
+    .navGrid{
+        height: fit-content;
+    }
+
+    #imagenesprod{
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .main{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;     
+        align-items: flex-start; 
+        justify-content: center;
+        margin-left: 2rem;
+        row-gap: 1rem;
+    }
+
+    #logoig{
+        display: none;
+    }
+    .aside{
+        display: none;
+    }
+
+    .footer{
+        text-align: center;
+        font-size: 0.4;
+    }
+
+    .elementosmenuIndex{
+        font-size: 20px;
+    }
+
+    #headerIndex{
+        font-size: 30px;
+    }
+
 }
 
