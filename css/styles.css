@@ -92,6 +92,7 @@ header{
 
 .linkindex:hover{
     transform: transslate(5px);
+}
 
 #headerIndex{
     margin-top: 40px;
