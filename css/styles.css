@@ -11,7 +11,6 @@
 
 /* propiedades de los hijos*/
 
-
 /* código del body */
 body{
     background-image: url(../img/cool-background.svg);
@@ -107,6 +106,7 @@ header{
     display: inline;
     column-count: 1;
     text-align: center;
+    padding: 0;
     column-gap: 1px;
     font-family: 'Belleza', sans-serif;
 }
@@ -114,7 +114,6 @@ header{
 header nav ul{
     display: grid;
     grid-area: elementosmenu;  
-    margin: 13rem;
     justify-content: space-evenly;
 }
 
@@ -154,6 +153,7 @@ header nav ul li:hover{
 .navGrid{
     grid-area: Menuitems;
     display: grid;
+    margin-top: 1.2rem;
 }
 
 .main{
@@ -189,7 +189,6 @@ footer{
 .contactform{
     border: none;
     margin: 0;
-    width: 20rem;
     grid-area: contactform;
 }
 
@@ -234,7 +233,7 @@ footer{
     height: 100vh;
     width: 100vw;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.3fr 0.5fr 1fr 1fr 1fr 0.3fr;
+    grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr 0.3fr;
     gap: 10px;
     grid-template-areas:    "logo header header header indexbutton"  
                             "Menuitems Menuitems Menuitems Menuitems Menuitems"                     
@@ -252,7 +251,7 @@ footer{
     height: 100vh;
     width: 100vw;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.3fr 0.5fr 1fr 1fr 1fr 0.3fr;
+    grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr 0.3fr;
     gap: 10px;
     grid-template-areas:    "logo header header header indexbutton"  
                             "Menuitems Menuitems Menuitems Menuitems Menuitems"                     
@@ -271,7 +270,7 @@ footer{
     height: 100vh;
     width: 100vw;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.3fr 0.5fr 1fr 1fr 1fr 0.3fr;
+    grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr 0.3fr;
     gap: 10px;
     grid-template-areas:    "logo header header header indexbutton"  
                             "Menuitems Menuitems Menuitems Menuitems Menuitems"                     
@@ -290,13 +289,11 @@ footer{
     height: 100vh;
     width: 100vw;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.3fr 0.5fr 1fr 1fr 1fr 0.3fr;
+    grid-template-rows: 0.3fr 1fr 3fr 0.3fr;
     gap: 10px;
     grid-template-areas:    "logo header header header indexbutton"  
                             "Menuitems Menuitems Menuitems Menuitems Menuitems"                     
-                            "aside contactform contactform contactform contactform"
-                            "aside contactform contactform contactform contactform"
-                            "aside contactform contactform contactform contactform"
+                            "contactform contactform contactform contactform ."
                             /*". sectionuno sectiondos . ."
                             ". sectiontres sectioncuatro . ."*/
                             "footer footer footer footer footer";
@@ -340,7 +337,7 @@ footer{
         height: 100vh;
         width: 100vw;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 0.3fr 1fr 2fr 1fr 1fr 1fr 1fr 1fr 0.3fr;
+        grid-template-rows: 1fr 1fr 2fr 1fr 1fr 1fr 1fr 1fr 0.3fr;
         gap: 10px;
         grid-template-areas:    "logo header header header indexbutton"  
                                 "Menuitems Menuitems Menuitems Menuitems Menuitems"                     
@@ -358,7 +355,7 @@ footer{
         height: 100vh;
         width: 100vw;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.3fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.3fr;
         gap: 10px;
         grid-template-areas:    "logo header header header indexbutton"  
                                 "Menuitems Menuitems Menuitems Menuitems Menuitems"                     
@@ -374,17 +371,14 @@ footer{
     .contenedorcontacto{
         display: grid;
         height: 100vh;
-        width: 100vw;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 0.3fr 1fr 2fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
         gap: 10px;
-        grid-template-areas:    "logo header header header indexbutton"  
+        grid-template-areas:    ". header header header ."  
                                 "Menuitems Menuitems Menuitems Menuitems Menuitems"                     
-                                "aside contactform contactform contactform contactform"
-                                "aside contactform contactform contactform contactform"
-                                ". . . . ."
-                                ". . . . ."
-                                ". . . . ."
+                                "aside contactform contactform contactform ."
+                                "aside contactform contactform contactform ."
+                                "aside contactform contactform contactform ."
                                 "footer footer footer footer footer";
     }
 
@@ -401,12 +395,12 @@ footer{
     }
 
     .listamenu{
-        font-size: 30px;
+        font-size: 1.5rem;
         text-decoration: none;
         color: black;
         list-style: none;
         display: inline;
-        column-count: 4;
+        column-count: 5;
         text-align: center;
         column-gap: 1px;
         font-family: 'Belleza', sans-serif;
@@ -423,7 +417,7 @@ footer{
         height: 2rem;
     }
     .aside{
-        display: block;
+        display: inline;
         grid-area: aside;  
         width: 8rem;
         height: 30rem;
@@ -450,9 +444,9 @@ footer{
         height: 100vh;
        /* width: fit-content; */
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 4fr 1fr 1fr 0.3fr;
+        grid-template-rows: 1fr 2fr 1fr 4fr 1fr 1fr 0.3fr;
         gap: 10px;
-        grid-template-areas:    ". header indexbutton"  
+        grid-template-areas:    ". header ."  
                                 "Menuitems Menuitems Menuitems"                 
                                 ". main ."
                                 ". main ."
@@ -464,11 +458,10 @@ footer{
     .contenedorproductos{
         display: grid;
         height: 100vh;
-        width: 100vw;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 4fr 1fr 1fr 0.3fr;
+        grid-template-rows: 1fr 2fr 1fr 4fr 1fr 1fr 0.3fr;
         gap: 10px;
-        grid-template-areas:    ". header indexbutton"  
+        grid-template-areas:    ". header ."  
                                 ". Menuitems ."                       
                                 ". main ."
                                 ". main ."
@@ -480,11 +473,10 @@ footer{
     .contenedornosotros{
         display: grid;
         height: 100vh;
-        width: fit-content;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 0.3fr;
+        grid-template-rows: 0.5fr 0.5fr 1fr 1fr 0.3fr;
         gap: 10px;
-        grid-template-areas:    ". header indexbutton"  
+        grid-template-areas:    ". header ."  
                                 ". Menuitems ."                    
                                 ". main ."
                                 ". main ."
@@ -494,14 +486,12 @@ footer{
     .contenedorcontacto{
         display: grid;
         height: 100vh;
-        width: fit-content;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 2fr 1fr 0.3fr;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 0.5fr 0.5fr 3fr 0.3fr;
         gap: 10px;
-        grid-template-areas:    ". header indexbutton"  
+        grid-template-areas:    ". header ."  
                                 ". Menuitems ."                     
-                                ". contactform ."
-                                ". contactform ."
+                                "contactform contactform contactform"
                                 "footer footer footer";
     }
 
