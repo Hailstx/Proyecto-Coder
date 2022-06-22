@@ -1,567 +1,445 @@
-.contenedor{
-    height: 100vh; 
-    display: grid;
-    /* columnas*/
-    grid-template-columns: repeat(5, 1fr);
-    /* filas*/
-    grid-template-rows: repeat(3, 2fr);
-    /*espacio*/
-    gap: 10px 20px;
-}
+/*reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
-/* propiedades de los hijos*/
+.contenedor {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 2fr);
+  gap: 10px 20px; }
 
-/* código del body */
-body{
-    background-image: url(../img/cool-background.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
+body {
+  background-image: url(../img/cool-background.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
 
-/* reset*/
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.card-img-top{
-    width: 50%;
-}
+.card-img-top {
+  width: 50%; }
 
 /* PROPIEDADES DE LOS HIJOS*/
-header{
-    grid-area: header;
+header {
+  grid-area: header;
+  display: grid;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-family: 'Belleza', sans-serif;
+  color: black; }
+  header header nav ul {
     display: grid;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    font-family: 'Belleza', sans-serif;
-    color: black;
-}
+    grid-area: elementosmenu;
+    justify-content: space-evenly; }
+    header header nav ul header nav ul li {
+      margin: 50px;
+      list-style: none;
+      font-size: 50px; }
+      header header nav ul header nav ul li header nav ul li:hover {
+        transform: scale(1.2); }
 
-.headerContact{
-    height: 6rem;
-}
+.headerContact {
+  height: 6rem; }
 
-.linkindexContact{
-    height: 3rem;
-    width: auto;
-}
+.linkindexContact {
+  height: 3rem;
+  width: auto; }
 
-.headerNovedades{
-    position: relative; top: 30px;
-}
+.headerNovedades {
+  position: relative;
+  top: 30px; }
 
-#ulIndex{
-    margin: 0px;
-    margin-top: 100px;
-}
+#ulIndex {
+  margin: 0px;
+  margin-top: 100px; }
 
-#logo{
+#logo {
+  display: flex;
+  grid-area: logo;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 40px;
+  background-repeat: no-repeat;
+  justify-content: flex-start;
+  position: relative;
+  top: -30px;
+  left: -50px;
+  border-radius: 30px; }
+
+.headertext {
+  display: grid;
+  grid-area: headertext; }
+
+.linkindex {
+  display: flex;
+  grid-area: linkindex;
+  text-align: end;
+  position: relative;
+  top: -130px;
+  left: 120px;
+  margin: 10px;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: black;
+  flex-direction: column;
+  align-items: flex-end; }
+
+.linkindex:hover {
+  transform: translate(5px); }
+
+#headerIndex {
+  margin-top: 40px; }
+
+.listamenu {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: black;
+  list-style: none;
+  display: inline;
+  column-count: 1;
+  text-align: center;
+  padding: 0;
+  column-gap: 1px;
+  font-family: 'Belleza', sans-serif; }
+
+.elementosmenu {
+  text-decoration: none;
+  color: black;
+  grid-area: elementosmenu;
+  list-style: none;
+  background: -webkit-linear-gradient(#6d6d6d, black);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent; }
+
+.elementosmenuIndex {
+  text-decoration: none;
+  color: black;
+  grid-area: elementosmenu;
+  list-style: none;
+  font-size: 30px;
+  background: -webkit-linear-gradient(#6d6d6d, black);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent; }
+
+.navGrid {
+  grid-area: Menuitems;
+  display: grid;
+  margin-top: 1.2rem; }
+
+.main {
+  display: grid;
+  grid-area: main;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: flex-start;
+  column-gap: 2rem;
+  row-gap: 2rem; }
+
+#imagenesprod {
+  width: 8rem;
+  height: 8rem; }
+
+#imagenesprod:hover {
+  transform: scale(1.2);
+  cursor: pointer; }
+
+footer {
+  background-color: #7c7c7c9c;
+  display: grid;
+  grid-area: footer;
+  justify-content: space-around;
+  text-align: center;
+  grid-template-rows: 2rem;
+  font-size: 0.6rem; }
+
+.contactform {
+  border: none;
+  margin: 0;
+  grid-area: contactform; }
+
+/* propiedades logo en footer*/
+#logoig {
+  display: inline;
+  position: relative;
+  top: -25px;
+  left: 130px;
+  width: 2rem;
+  height: 2rem; }
+
+#linkig {
+  color: black;
+  text-align: center;
+  font-size: 0.8rem;
+  font-family: 'Radio Canada', sans-serif; }
+
+.aside {
+  display: none; }
+
+/* propiedades del padre en index*/
+.contenedor {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1.5fr 1fr 0.3fr 1.5fr 1fr 0.3fr;
+  gap: 10px;
+  grid-template-areas: "header header header"
+ "elementosmenu elementosmenu elementosmenu"
+ "elementosmenu elementosmenu elementosmenu"
+ "elementosmenu elementosmenu elementosmenu"
+ "elementosmenu elementosmenu elementosmenu"
+ "footer footer footer"; }
+
+/* propiedades del body en novedades*/
+.contenedornovedades {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr 0.3fr;
+  gap: 10px;
+  grid-template-areas: "logo header header header indexbutton" "Menuitems Menuitems Menuitems Menuitems Menuitems" "main main main main main" "main main main main main" "main main main main main" "footer footer footer footer footer"; }
+
+/*propiedades del body en productos*/
+.contenedorproductos {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr 0.3fr;
+  gap: 10px;
+  grid-template-areas: "logo header header header indexbutton" "Menuitems Menuitems Menuitems Menuitems Menuitems" "main main main main ." "main main main main ." "main main main main ." "footer footer footer footer footer"; }
+
+/* propiedades del body en nosotros */
+.contenedornosotros {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr 0.3fr;
+  gap: 10px;
+  grid-template-areas: "logo header header header indexbutton" "Menuitems Menuitems Menuitems Menuitems Menuitems" "aside main main main main" "aside main main main main" "aside main main main main" "footer footer footer footer footer"; }
+
+/* propiedades del body en contacto */
+.contenedorcontacto {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.3fr 1fr 3fr 0.3fr;
+  gap: 10px;
+  grid-template-areas: "logo header header header indexbutton" "Menuitems Menuitems Menuitems Menuitems Menuitems" "contactform contactform contactform contactform ." "footer footer footer footer footer"; }
+
+.card-img-top {
+  width: 50%; }
+
+.card {
+  width: 10rem;
+  height: 15rem; }
+
+.overflow-auto {
+  width: max-content; }
+
+/* Media Queries */
+@media screen and (min-width: 600px) {
+  .contenedornovedades {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 2fr 1fr 1fr 1fr 1fr 1fr 0.3fr;
+    gap: 10px;
+    grid-template-areas: "logo header header header indexbutton"  
+ "Menuitems Menuitems Menuitems Menuitems Menuitems"                     
+ "aside main main main main"
+ "aside main main main main"
+ "aside main main main main"
+ "aside main main main main"
+ "aside main main main main"
+ "aside main main main main"
+ "footer footer footer footer footer"; }
+  .contenedorproductos {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 2fr 1fr 1fr 1fr 1fr 1fr 0.3fr;
+    gap: 10px;
+    grid-template-areas: "logo header header header indexbutton"  
+ "Menuitems Menuitems Menuitems Menuitems Menuitems"                     
+ "aside main main main main"
+ "aside main main main main"
+ "aside main main main main"
+ "aside main main main main"
+ "aside main main main main"
+ "aside main main main main"
+ "footer footer footer footer footer"; }
+  .contenedornosotros {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 2fr 1fr 1fr 1fr 1fr 1fr 0.3fr;
+    gap: 10px;
+    grid-template-areas: "logo header header header indexbutton"  
+ "Menuitems Menuitems Menuitems Menuitems Menuitems"                     
+ "aside main main main main"
+ "aside main main main main"
+ "aside main main main main"
+ "aside main main main main"
+ "aside main main main main"
+ "aside main main main main"
+ "footer footer footer footer footer"; }
+  .contenedorcontacto {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 2fr 1fr 1fr 1fr 1fr 1fr 0.3fr;
+    gap: 10px;
+    grid-template-areas: ". header header header ."  
+ "Menuitems Menuitems Menuitems Menuitems Menuitems"                     
+ "aside contactform contactform contactform ."
+ "aside contactform contactform contactform ."
+ "aside contactform contactform contactform ."
+ "aside contactform contactform contactform ."
+ "aside contactform contactform contactform ."
+ "aside contactform contactform contactform ."
+ "footer footer footer footer footer"; }
+  #logo {
     display: flex;
     grid-area: logo;
-    width: 3rem;
-    height: 3rem;
+    width: 5rem;
+    height: 5rem;
     border-radius: 40px;
     background-repeat: no-repeat;
     justify-content: flex-start;
-    position: relative; top: -30px; left: -50px;
-    border-radius: 30px;
-}
-
-.headertext{
-    display: grid;
-    grid-area: headertext;
-}
-
-.linkindex{
-    display: flex;
-    grid-area: linkindex;
-    text-align: end;
-    position: relative; top: -130px; left: 120px;
-    margin: 10px;
-    font-size: 1.5rem;
-    text-decoration: none;
-    color: black;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-.linkindex:hover{
-    transform: transslate(5px);
-}
-
-#headerIndex{
-    margin-top: 40px;
-
-}
-
-.listamenu{
+    position: relative;
+    top: -50px;
+    left: -110px;
+    border-radius: 30px; }
+  .listamenu {
     font-size: 1.5rem;
     text-decoration: none;
     color: black;
     list-style: none;
     display: inline;
-    column-count: 1;
+    column-count: 5;
     text-align: center;
-    padding: 0;
     column-gap: 1px;
-    font-family: 'Belleza', sans-serif;
-}
-
-header nav ul{
-    display: grid;
-    grid-area: elementosmenu;  
-    justify-content: space-evenly;
-}
-
-.elementosmenu{
-    text-decoration: none;
-    color: black;
-    grid-area: elementosmenu;
-    list-style: none;
-    background: -webkit-linear-gradient(rgb(109, 109, 109), rgb(0, 0, 0));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.elementosmenuIndex{
-    text-decoration: none;
-    color: black;
-    grid-area: elementosmenu;
-    list-style: none;
-    font-size: 30px;
-    background: -webkit-linear-gradient(rgb(109, 109, 109), rgb(0, 0, 0));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-header nav ul li{
-    margin: 50px;
-    list-style: none;
-    font-size: 50px;
-}
-
-header nav ul li:hover{
-    transform: scale(1.2);
-}
-
-.navGrid{
-    grid-area: Menuitems;
-    display: grid;
-    margin-top: 1.2rem;
-}
-
-.main{
-    display: grid;
-    grid-area: main;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;     
-    align-items: flex-start;  
-    column-gap: 2rem;
-    row-gap: 2rem;
-}
-
-#imagenesprod{
-    width: 8rem;
-    height: 8rem;
-}
-
-#imagenesprod:hover{
-    transform: scale(1.2);
-    cursor: pointer;
-}
-
-footer{
-    background-color: #7c7c7c9c;
-    display: grid;
-    grid-area: footer;
-    justify-content: space-around;
-    text-align: center;
-    grid-template-rows: 2rem;
-    font-size: 0.6rem;
-}
-
-.contactform{
-    border: none;
-    margin: 0;
-    grid-area: contactform;
-}
-
-/* propiedades logo en footer*/
-#logoig{
-    display: inline;
-    position: relative; top: -25px; left: 130px;
-    width: 2rem;
-    height: 2rem;
-}
-
-#linkig{
-    color: black;
-    text-align: center;
-    font-size: 0.8rem;
-    font-family: 'Radio Canada', sans-serif;
-}
-
-.aside{
-    display: none;
-}
-
- /* propiedades del padre en index*/
- .contenedor{
-     display: grid;
-     height: 100vh;
-     width: 100vw;
-     grid-template-columns: 1fr 1fr 1fr;
-     grid-template-rows: 1.5fr 1fr 0.3fr 1.5fr 1fr 0.3fr;
-     gap: 10px;
-     grid-template-areas:   "header header header"
-                            "elementosmenu elementosmenu elementosmenu"
-                            "elementosmenu elementosmenu elementosmenu"
-                            "elementosmenu elementosmenu elementosmenu"
-                            "elementosmenu elementosmenu elementosmenu"
-                            "footer footer footer";
- }
-
- /* propiedades del body en novedades*/
- .contenedornovedades{
-    display: grid;
-    height: 100vh;
-    width: 100vw;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr 0.3fr;
-    gap: 10px;
-    grid-template-areas:    "logo header header header indexbutton"  
-                            "Menuitems Menuitems Menuitems Menuitems Menuitems"                     
-                            "main main main main main"
-                            "main main main main main"
-                            "main main main main main"
-                            /*". sectionuno sectiondos . ."
-                            ". sectiontres sectioncuatro . ."*/
-                            "footer footer footer footer footer";
-}
-
-/*propiedades del body en productos*/
-.contenedorproductos{
-    display: grid;
-    height: 100vh;
-    width: 100vw;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr 0.3fr;
-    gap: 10px;
-    grid-template-areas:    "logo header header header indexbutton"  
-                            "Menuitems Menuitems Menuitems Menuitems Menuitems"                     
-                            "main main main main ."
-                            "main main main main ."
-                            "main main main main ."
-                            /*". sectionuno sectiondos . ."
-                            ". sectiontres sectioncuatro . ."*/
-                            "footer footer footer footer footer";
-}
-
-/* propiedades del body en nosotros */
-
-.contenedornosotros{
-    display: grid;
-    height: 100vh;
-    width: 100vw;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr 0.3fr;
-    gap: 10px;
-    grid-template-areas:    "logo header header header indexbutton"  
-                            "Menuitems Menuitems Menuitems Menuitems Menuitems"                     
-                            "aside main main main main"
-                            "aside main main main main"
-                            "aside main main main main"
-                            /*". sectionuno sectiondos . ."
-                            ". sectiontres sectioncuatro . ."*/
-                            "footer footer footer footer footer";
-}
-
-/* propiedades del body en contacto */
-
-.contenedorcontacto{
-    display: grid;
-    height: 100vh;
-    width: 100vw;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.3fr 1fr 3fr 0.3fr;
-    gap: 10px;
-    grid-template-areas:    "logo header header header indexbutton"  
-                            "Menuitems Menuitems Menuitems Menuitems Menuitems"                     
-                            "contactform contactform contactform contactform ."
-                            /*". sectionuno sectiondos . ."
-                            ". sectiontres sectioncuatro . ."*/
-                            "footer footer footer footer footer";
-}
-
-.card-img-top{
-    width: 50%;
-}
-
-.card{
+    font-family: 'Belleza', sans-serif; }
+  #imagenesprod {
     width: 10rem;
-    height: 15rem;
-}
+    height: 10rem; }
+  #logoig {
+    position: relative;
+    top: -25px;
+    left: 130px;
+    width: 2rem;
+    height: 2rem; }
+  .aside {
+    display: inline;
+    grid-area: aside;
+    width: 8rem;
+    height: 30rem;
+    margin-left: 10px; }
+  #publicidad {
+    width: 8rem;
+    height: 30rem; }
+  .card-img-top {
+    width: 50%; }
+  .card {
+    width: 10rem;
+    height: 15rem; } }
 
-.overflow-auto{
-    width: max-content;
-}
-
-/* Media Queries */
-@media screen and (min-width:600px) {
-    .contenedornovedades{
-        display: grid;
-        height: 100vh;
-        width: 100vw;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 2fr 1fr 1fr 1fr 1fr 1fr 0.3fr;
-        gap: 10px;
-        grid-template-areas:    "logo header header header indexbutton"  
-                                "Menuitems Menuitems Menuitems Menuitems Menuitems"                     
-                                "aside main main main main"
-                                "aside main main main main"
-                                "aside main main main main"
-                                "aside main main main main"
-                                "aside main main main main"
-                                "aside main main main main"
-                                "footer footer footer footer footer";
-    }
-
-    .contenedorproductos{
-        display: grid;
-        height: 100vh;
-        width: 100vw;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 2fr 1fr 1fr 1fr 1fr 1fr 0.3fr;
-        gap: 10px;
-        grid-template-areas:    "logo header header header indexbutton"  
-                                "Menuitems Menuitems Menuitems Menuitems Menuitems"                     
-                                "aside main main main main"
-                                "aside main main main main"
-                                "aside main main main main"
-                                "aside main main main main"
-                                "aside main main main main"
-                                "aside main main main main"
-                                "footer footer footer footer footer";
-    }
-
-    .contenedornosotros{
-        display: grid;
-        height: 100vh;
-        width: 100vw;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 2fr 1fr 1fr 1fr 1fr 1fr 0.3fr;
-        gap: 10px;
-        grid-template-areas:    "logo header header header indexbutton"  
-                                "Menuitems Menuitems Menuitems Menuitems Menuitems"                     
-                                "aside main main main main"
-                                "aside main main main main"
-                                "aside main main main main"
-                                "aside main main main main"
-                                "aside main main main main"
-                                "aside main main main main"
-                                "footer footer footer footer footer";
-    }
-
-    .contenedorcontacto{
-        display: grid;
-        height: 100vh;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 2fr 1fr 1fr 1fr 1fr 1fr 0.3fr;
-        gap: 10px;
-        grid-template-areas:    ". header header header ."  
-                                "Menuitems Menuitems Menuitems Menuitems Menuitems"                     
-                                "aside contactform contactform contactform ."
-                                "aside contactform contactform contactform ."
-                                "aside contactform contactform contactform ."
-                                "aside contactform contactform contactform ."
-                                "aside contactform contactform contactform ."
-                                "aside contactform contactform contactform ."
-                                "footer footer footer footer footer";
-    }
-
-    #logo{
-        display: flex;
-        grid-area: logo;
-        width: 5rem;
-        height: 5rem;
-        border-radius: 40px;
-        background-repeat: no-repeat;
-        justify-content: flex-start;
-        position: relative; top: -50px; left: -110px;
-        border-radius: 30px;
-    }
-
-    .listamenu{
-        font-size: 1.5rem;
-        text-decoration: none;
-        color: black;
-        list-style: none;
-        display: inline;
-        column-count: 5;
-        text-align: center;
-        column-gap: 1px;
-        font-family: 'Belleza', sans-serif;
-    }
-
-    #imagenesprod{
-        width: 10rem;
-        height: 10rem;
-    }
-
-    #logoig{
-        position: relative; top: -25px; left: 130px;
-        width: 2rem;
-        height: 2rem;
-    }
-    .aside{
-        display: inline;
-        grid-area: aside;  
-        width: 8rem;
-        height: 30rem;
-        margin-left: 10px;
-    }
-    #publicidad{
-        width: 8rem;
-        height: 30rem;
-    }
-
-    .card-img-top{
-        width: 50%;
-    }
-    
-    .card{
-        width: 10rem;
-        height: 15rem;
-    }
-}
-
-@media screen and (max-width:320px) {
-    .contenedornovedades{
-        display: grid;
-        height: 100vh;
-       /* width: fit-content; */
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 2fr 1fr 4fr 1fr 1fr 0.3fr;
-        gap: 10px;
-        grid-template-areas:    ". header ."  
-                                "Menuitems Menuitems Menuitems"                 
-                                ". main ."
-                                ". main ."
-                                ". main ."
-                                ". main ."
-                                "footer footer footer";
-    }
-
-    .contenedorproductos{
-        display: grid;
-        height: 100vh;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 2fr 1fr 4fr 1fr 1fr 0.3fr;
-        gap: 10px;
-        grid-template-areas:    ". header ."  
-                                ". Menuitems ."                       
-                                ". main ."
-                                ". main ."
-                                ". main ."
-                                ". main ."
-                                "footer footer footer";
-    }
-
-    .contenedornosotros{
-        display: grid;
-        height: 100vh;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 0.5fr 0.5fr 1fr 1fr 0.3fr;
-        gap: 10px;
-        grid-template-areas:    ". header ."  
-                                ". Menuitems ."                    
-                                ". main ."
-                                ". main ."
-                                "footer footer footer";
-    }
-
-    .contenedorcontacto{
-        display: grid;
-        height: 100vh;
-        grid-template-columns: 1fr 2fr 1fr;
-        grid-template-rows: 0.5fr 0.5fr 3fr 0.3fr;
-        gap: 10px;
-        grid-template-areas:    ". header ."  
-                                ". Menuitems ."                     
-                                "contactform contactform contactform"
-                                "footer footer footer";
-    }
-
-    #logo{
-        display: none;
-    }
-
-    .headerNovedades{
-        font-size: 2rem;
-    }
-
-    .listamenu{
-        font-size: 1.5rem;
-        height: fit-content;
-        column-count: 1;
-        text-align: center;
-    }
-
-    .navGrid{
-        height: fit-content;
-    }
-
-    #imagenesprod{
-        width: 5rem;
-        height: 5rem;
-    }
-
-    .main{
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;     
-        align-items: flex-start; 
-        justify-content: center;
-        row-gap: 7rem;
-        margin: 0;
-    }
-
-    #logoig{
-        display: none;
-    }
-    .aside{
-        display: none;
-    }
-
-    .footer{
-        text-align: center;
-        font-size: 0.4;
-    }
-
-    .elementosmenuIndex{
-        font-size: 20px;
-    }
-
-    #headerIndex{
-        font-size: 30px;
-    }
-
-    .card-img-top{
-        width: 20%;
-    }
-
-    .card{
-        width: 10rem;
-        height: 8.5rem;
-    }
-
-    .overflow-auto{
-        width: max-content;
-    }
-}
-
+@media screen and (max-width: 320px) {
+  .contenedornovedades {
+    display: grid;
+    height: 100vh;
+    /* width: fit-content; */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr 4fr 1fr 1fr 0.3fr;
+    gap: 10px;
+    grid-template-areas: ". header ."  
+ "Menuitems Menuitems Menuitems"                 
+ ". main ."
+ ". main ."
+ ". main ."
+ ". main ."
+ "footer footer footer"; }
+  .contenedorproductos {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr 4fr 1fr 1fr 0.3fr;
+    gap: 10px;
+    grid-template-areas: ". header ."  
+ ". Menuitems ."                       
+ ". main ."
+ ". main ."
+ ". main ."
+ ". main ."
+ "footer footer footer"; }
+  .contenedornosotros {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr 1fr 1fr 0.3fr;
+    gap: 10px;
+    grid-template-areas: ". header ."  
+ ". Menuitems ."                    
+ ". main ."
+ ". main ."
+ "footer footer footer"; }
+  .contenedorcontacto {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr 3fr 0.3fr;
+    gap: 10px;
+    grid-template-areas: ". header ."  
+ ". Menuitems ."                     
+ "contactform contactform contactform"
+ "footer footer footer"; }
+  #logo {
+    display: none; }
+  .headerNovedades {
+    font-size: 2rem; }
+  .listamenu {
+    font-size: 1.5rem;
+    height: fit-content;
+    column-count: 1;
+    text-align: center; }
+  .navGrid {
+    height: fit-content; }
+  #imagenesprod {
+    width: 5rem;
+    height: 5rem; }
+  .main {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    align-items: flex-start;
+    justify-content: center;
+    row-gap: 7rem;
+    margin: 0; }
+  #logoig {
+    display: none; }
+  .aside {
+    display: none; }
+  .footer {
+    text-align: center;
+    font-size: 0.4; }
+  .elementosmenuIndex {
+    font-size: 20px; }
+  #headerIndex {
+    font-size: 30px; }
+  .card-img-top {
+    width: 20%; }
+  .card {
+    width: 10rem;
+    height: 8.5rem; }
+  .overflow-auto {
+    width: max-content; } }
