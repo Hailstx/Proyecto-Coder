@@ -5,3 +5,32 @@ $fullheight: 100vh;
 $fullwidth: 100vw;
 $columnasmenor: 1fr 1fr 1fr;
 $rowsmenor: 1fr 2fr 1fr 4fr 1fr 1fr 0.3fr;
+
+//mixin
+
+@mixin inlinecenter {
+    display: inline;
+    text-align: center;
+}
+
+@mixin fullsizem ($fullheight, $fullwidth){
+    height: $fullheight;
+    width: $fullwidth; 
+}
+
+//extend
+
+%fullsize {
+ height: $fullheight;
+ width: $fullwidth;    
+}
+
+//maps
+
+$fotosprod: (
+    width: 8rem,
+    height: 8rem,
+);
+
+$widthfotos: map-get($fotosprod, width);
+$heightfotos: map-get($fotosprod, height);

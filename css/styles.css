@@ -1,4 +1,8 @@
 /*reset*/
+.contenedor, .contenedornovedades, .contenedorproductos, .contenedornosotros, .contenedorcontacto {
+  height: 100vh;
+  width: 100vw; }
+
 * {
   margin: 0;
   padding: 0;
@@ -98,8 +102,8 @@ header {
   color: black;
   list-style: none;
   display: inline;
-  column-count: 1;
   text-align: center;
+  column-count: 1;
   padding: 0;
   column-gap: 1px;
   font-family: 'Belleza', sans-serif; }
@@ -182,23 +186,14 @@ footer {
 /* propiedades del padre en index*/
 .contenedor {
   display: grid;
-  height: 100vh;
-  width: 100vw;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1.5fr 1fr 0.3fr 1.5fr 1fr 0.3fr;
   gap: 10px;
-  grid-template-areas: "header header header"
- "elementosmenu elementosmenu elementosmenu"
- "elementosmenu elementosmenu elementosmenu"
- "elementosmenu elementosmenu elementosmenu"
- "elementosmenu elementosmenu elementosmenu"
- "footer footer footer"; }
+  grid-template-areas: "header header header" "elementosmenu elementosmenu elementosmenu" "elementosmenu elementosmenu elementosmenu" "elementosmenu elementosmenu elementosmenu" "elementosmenu elementosmenu elementosmenu" "footer footer footer"; }
 
 /* propiedades del body en novedades*/
 .contenedornovedades {
   display: grid;
-  height: 100vh;
-  width: 100vw;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr 0.3fr;
   gap: 10px;
@@ -207,8 +202,6 @@ footer {
 /*propiedades del body en productos*/
 .contenedorproductos {
   display: grid;
-  height: 100vh;
-  width: 100vw;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr 0.3fr;
   gap: 10px;
@@ -217,8 +210,6 @@ footer {
 /* propiedades del body en nosotros */
 .contenedornosotros {
   display: grid;
-  height: 100vh;
-  width: 100vw;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr 0.3fr;
   gap: 10px;
@@ -227,8 +218,6 @@ footer {
 /* propiedades del body en contacto */
 .contenedorcontacto {
   display: grid;
-  height: 100vh;
-  width: 100vw;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 0.3fr 1fr 3fr 0.3fr;
   gap: 10px;
@@ -253,15 +242,7 @@ footer {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 2fr 1fr 1fr 1fr 1fr 1fr 0.3fr;
     gap: 10px;
-    grid-template-areas: "logo header header header indexbutton"  
- "Menuitems Menuitems Menuitems Menuitems Menuitems"                     
- "aside main main main main"
- "aside main main main main"
- "aside main main main main"
- "aside main main main main"
- "aside main main main main"
- "aside main main main main"
- "footer footer footer footer footer"; }
+    grid-template-areas: "logo header header header indexbutton"   "Menuitems Menuitems Menuitems Menuitems Menuitems"                      "aside main main main main" "aside main main main main" "aside main main main main" "aside main main main main" "aside main main main main" "aside main main main main" "footer footer footer footer footer"; }
   .contenedorproductos {
     display: grid;
     height: 100vh;
@@ -269,15 +250,7 @@ footer {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 2fr 1fr 1fr 1fr 1fr 1fr 0.3fr;
     gap: 10px;
-    grid-template-areas: "logo header header header indexbutton"  
- "Menuitems Menuitems Menuitems Menuitems Menuitems"                     
- "aside main main main main"
- "aside main main main main"
- "aside main main main main"
- "aside main main main main"
- "aside main main main main"
- "aside main main main main"
- "footer footer footer footer footer"; }
+    grid-template-areas: "logo header header header indexbutton"   "Menuitems Menuitems Menuitems Menuitems Menuitems"                      "aside main main main main" "aside main main main main" "aside main main main main" "aside main main main main" "aside main main main main" "aside main main main main" "footer footer footer footer footer"; }
   .contenedornosotros {
     display: grid;
     height: 100vh;
@@ -285,30 +258,14 @@ footer {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 2fr 1fr 1fr 1fr 1fr 1fr 0.3fr;
     gap: 10px;
-    grid-template-areas: "logo header header header indexbutton"  
- "Menuitems Menuitems Menuitems Menuitems Menuitems"                     
- "aside main main main main"
- "aside main main main main"
- "aside main main main main"
- "aside main main main main"
- "aside main main main main"
- "aside main main main main"
- "footer footer footer footer footer"; }
+    grid-template-areas: "logo header header header indexbutton"   "Menuitems Menuitems Menuitems Menuitems Menuitems"                      "aside main main main main" "aside main main main main" "aside main main main main" "aside main main main main" "aside main main main main" "aside main main main main" "footer footer footer footer footer"; }
   .contenedorcontacto {
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 2fr 1fr 1fr 1fr 1fr 1fr 0.3fr;
     gap: 10px;
-    grid-template-areas: ". header header header ."  
- "Menuitems Menuitems Menuitems Menuitems Menuitems"                     
- "aside contactform contactform contactform ."
- "aside contactform contactform contactform ."
- "aside contactform contactform contactform ."
- "aside contactform contactform contactform ."
- "aside contactform contactform contactform ."
- "aside contactform contactform contactform ."
- "footer footer footer footer footer"; }
+    grid-template-areas: ". header header header ."   "Menuitems Menuitems Menuitems Menuitems Menuitems"                      "aside contactform contactform contactform ." "aside contactform contactform contactform ." "aside contactform contactform contactform ." "aside contactform contactform contactform ." "aside contactform contactform contactform ." "aside contactform contactform contactform ." "footer footer footer footer footer"; }
   #logo {
     display: flex;
     grid-area: logo;
@@ -326,8 +283,8 @@ footer {
     text-decoration: none;
     color: black;
     list-style: none;
-    display: inline;
     column-count: 5;
+    display: inline;
     text-align: center;
     column-gap: 1px;
     font-family: 'Belleza', sans-serif; }
@@ -363,47 +320,28 @@ footer {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 2fr 1fr 4fr 1fr 1fr 0.3fr;
     gap: 10px;
-    grid-template-areas: ". header ."  
- "Menuitems Menuitems Menuitems"                 
- ". main ."
- ". main ."
- ". main ."
- ". main ."
- "footer footer footer"; }
+    grid-template-areas: ". header ."   "Menuitems Menuitems Menuitems"                  ". main ." ". main ." ". main ." ". main ." "footer footer footer"; }
   .contenedorproductos {
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 2fr 1fr 4fr 1fr 1fr 0.3fr;
     gap: 10px;
-    grid-template-areas: ". header ."  
- ". Menuitems ."                       
- ". main ."
- ". main ."
- ". main ."
- ". main ."
- "footer footer footer"; }
+    grid-template-areas: ". header ."   ". Menuitems ."                        ". main ." ". main ." ". main ." ". main ." "footer footer footer"; }
   .contenedornosotros {
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 0.5fr 0.5fr 1fr 1fr 0.3fr;
     gap: 10px;
-    grid-template-areas: ". header ."  
- ". Menuitems ."                    
- ". main ."
- ". main ."
- "footer footer footer"; }
+    grid-template-areas: ". header ."   ". Menuitems ."                     ". main ." ". main ." "footer footer footer"; }
   .contenedorcontacto {
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 0.5fr 0.5fr 3fr 0.3fr;
     gap: 10px;
-    grid-template-areas: ". header ."  
- ". Menuitems ."                     
- "contactform contactform contactform"
- "footer footer footer"; }
+    grid-template-areas: ". header ."   ". Menuitems ."                      "contactform contactform contactform" "footer footer footer"; }
   #logo {
     display: none; }
   .headerNovedades {
