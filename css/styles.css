@@ -132,7 +132,8 @@ header {
 .navGrid {
   grid-area: Menuitems;
   display: grid;
-  margin-top: 1.2rem; }
+  margin-top: 1.2rem;
+  margin-bottom: 3.5rem; }
 
 .main {
   display: grid;
